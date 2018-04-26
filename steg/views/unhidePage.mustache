@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Unhide Page</h1>
+      <h4> {{errMessage}} </h4>
+
+      <form action="/unhidePage.html" method="post">
+        {{#imageList.length}}
+          {{#imageList}}
+            <input type="radio" value={{.}} name="answer">{{.}}<br><br>
+          {{/imageList}}
+        {{/imageList.length}}
+
+        <input type="submit" value="Submit">
+      </form>
+
+
+    </div>
+  </body>
+</html>
